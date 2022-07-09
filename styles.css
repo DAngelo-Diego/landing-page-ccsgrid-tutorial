@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@300&family=Josefin+Sans&family=League+Gothic&family=League+Spartan:wght@500;600;700&family=Montserrat:wght@300&family=Open+Sans:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;700&family=Roboto:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1em;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.hero {
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  color: white;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  grid-template-areas:
+    "nav"
+    "content";
+  min-height: 100vh;
+}
+
+.nav {
+  grid-area: nav;
+  display: grid;
+  justify-content: space-between;
+  grid-auto-flow: column;
+  gap: 1em;
+  align-items: center;
+  height: 90px;
+}
+
+.nav__list {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2em;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: white;
+  transition: all 400ms ease;
+}
+
+.nav__link:hover {
+  border: 1px solid white;
+  padding: 10px 20px;
+}
+
+.nav__logo {
+  font-size: 2rem;
+  font-weight: lighter;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.nav__menu {
+  display: none;
+}
+
+.nav__icon {
+  width: 30px;
+}
+
+.hero__main {
+  grid-area: content;
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding-bottom: 180px;
+}
+
+.hero__waves {
+  grid-area: content;
+  align-self: end;
+}
+
+.hero__title {
+  font-size: 2.2rem;
+  letter-spacing: 4px;
+}
+
+.hero__subtitle {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.hero__cta {
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  padding: 10px 28px;
+  border: 1px solid;
+  border-radius: 2.5px;
+  display: inline-block;
+  font-weight: lighter;
+  transition: all 300ms ease;
+}
+
+.hero__cta:hover {
+  background-color: #e9f8ff;
+  color: #a1c4fd;
+}
+
+.hero__img {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    min-height: 10vh;
+  }
+
+  .nav__list {
+    display: none;
+  }
+
+  .nav__menu {
+    display: block;
+  }
+
+  .hero__title {
+    font-size: 1.5rem;
+  }
+  .hero__subtitle {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .hero__main {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content max-content;
+    text-align: center;
+    padding-bottom: 100px;
+  }
+
+  .hero__picture {
+    grid-row: 1/2;
+  }
+
+  .hero__img {
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .nav__logo {
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+  }
+
+  .hero__cta {
+    padding: 10px 20px;
+    margin: 0;
+  }
+
+  .hero__waves {
+    height: 10px;
+  }
+}
